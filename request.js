@@ -1,4 +1,6 @@
 var request = require('request');
+var http = require('http');
+var fs = require('fs');
 
 //try a get request
 request.get('https://damp-cove-43225.herokuapp.com/', function(err, data){
@@ -26,4 +28,18 @@ request({
   } else {
     console.log(response.statusCode);
   }
+});
+
+//After adding the html and created the server code , run your .js file with the
+//server code in the terminal with node and then go to localhost:3000 to see if the html got served correctly
+
+fs.readFile('index.html', function (err, html) {
+  if (err) {
+    throw err;
+  }
+  http.createServer(function(request, response) {
+    response.writeHeader(200, {"Content-Type": "text/html"});
+    response.write(html);
+    response.end();
+  }).listen(3000);
 });
