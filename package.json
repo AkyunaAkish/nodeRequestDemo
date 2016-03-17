@@ -1,0 +1,23 @@
+{
+  "name": "nodeRequestDemo",
+  "version": "1.0.0",
+  "description": "#### Fork and clone this repo then run these commands:",
+  "main": "request.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSturges/nodeRequestDemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSturges/nodeRequestDemo/issues"
+  },
+  "homepage": "https://github.com/MSturges/nodeRequestDemo#readme",
+  "dependencies": {
+    "request": "^2.69.0"
+  }
+}
